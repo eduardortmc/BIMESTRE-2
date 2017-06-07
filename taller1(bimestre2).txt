@@ -1,0 +1,228 @@
+ejericio1 
+
+package arreglo.lista;
+
+import static java.util.Collections.list;
+import java.util.Scanner;
+
+
+public class ArregloLista {
+
+    
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+    
+    int i=0, n,k,suma = 0,promedio = 0,may=0;
+    //pido variables al usuario
+    System.out.println("Ingrese su limite " );
+    n=datos.nextInt();
+    //pido variables
+    int[] lista = new int[n];
+    for (i=0 ;i<lista.length;i++){
+        System.out.println("Ingrese valores [] "+i );
+        lista[i]=datos.nextInt();
+       //realizo operaciones     
+        }
+    for (i=0 ;i<lista.length;i++){
+        suma+=lista[i];
+        promedio=suma/n;
+        
+        if(may<lista[i]){
+			
+	may=lista[i];
+			}
+            
+        }
+            System.out.println("la suma de todo es "+suma );
+            System.out.println("el promedio de todo es "+prom );
+            System.out.println("el mayor es "+may );
+            
+    }
+    
+}
+
+
+EJERCICIO2
+package arreglo.menor;
+
+import java.util.Scanner;
+
+
+public class ArregloMenor {   
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+    
+    int i=0, n,k,suma = 0,prom = 0, men=0;
+    //pido variables al usuario
+    System.out.println("Ingrese su limite " );
+    n=datos.nextInt();
+    //PIDO VARIABLES
+    int[] lista = new int[n];
+    for (i=0 ;i<lista.length;i++){
+        System.out.println("Ingrese valores [] "+i );
+        lista[i]=datos.nextInt();
+        men=lista[i];    
+        }
+//REALIZO LAS OPERACIONES
+    for (i=0 ;i<lista.length;i++){
+        if (lista[i]<men){
+            men=lista[i];
+            
+        }
+            
+        }
+    System.out.println("El menor es "+men );
+    
+    }
+    
+}
+
+
+EJERCICIO 3
+package arreglorepe;
+
+import java.util.Scanner;
+
+
+public class Arreglorepe {
+
+    
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+    
+    int i=0, n,j=0,igual=0;
+    //pido variables al usuario
+    System.out.println("Ingrese su limite " );
+    n=datos.nextInt();
+    //creo ciclos repetitivos
+    int[] lista = new int[n];
+    for (i=0 ;i<lista.length;i++){
+        System.out.println("Ingrese valores [] "+i );
+        lista[i]=datos.nextInt();
+  
+        }
+    
+    for (i=0 ;i<=n;i++){
+        for (j=0 ;j<=n;j++){
+            if(lista[j])==lista[i]){
+            igual=igual+1;
+        }
+        }
+        
+    }
+    System.out.println("El numero "+lista[i]+" esta repetido"+igual+ "veces" );
+    }
+    
+}
+
+EJERCICIO4
+
+package cedula.arreglo;
+
+import static java.lang.Double.sum;
+import java.util.Scanner;
+
+
+public class CedulaArreglo {
+
+    
+     public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+    
+    int i=0,n=0,sum = 0,sum2=0,sum3=0,val=0,tot=0,total=0,digito;
+    
+     int[] lista = new int[n];
+     int[] lista2 = new int[n];
+    //creo un ciclo repetitivo
+    for(i=0;i<9;i++){
+       //pido variables al usuario
+       System.out.println("Ingrese su cedula [] "+i );
+        lista[i]=datos.nextInt();
+        
+        //operaciones
+        if(i%2==0){
+            lista[2]=2*lista[i];
+            if(lista2[i]>9){
+                lista2[i]=lista2[i]-9;
+                
+            }
+            sum=lista2[i]+sum;
+            
+        }
+        else if (i%2!=0){
+            lista2[i]=1*lista[i];
+            if(lista2[i]>9){
+                lista2[i]=lista2[i]+sum2;
+            }
+        }
+            
+       sum3=sum2+sum;
+       val=sum3;
+       val=(int) ((Math.ceil(val/10))*10);
+        tot=total+sum3;
+       System.out.println("Ingrese su ultimo digito denuevo " );
+       digito=datos.nextInt();
+       
+       if(tot==digito){
+           System.out.println("Su numero es el correcto " );
+       }else{
+           System.out.println("numero no valido " );
+       }
+       
+    }
+    }
+
+EJERCICIO 5
+package arreglooperaciones;
+
+import java.util.Scanner;
+
+
+public class Arreglooperaciones {
+
+    
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+    
+    int i=0, n = 0,suma=0,mult=1,resta=0,div=1;
+    int[] lista = new int[n];
+    //pido variables al usuario
+    System.out.println("Ingrese su limite " );
+    n=datos.nextInt();
+   
+    for (i=0 ;i<lista.length;i++){
+        System.out.println("Ingrese valores " );
+        lista[i]=datos.nextInt();
+           
+        }
+    for (i=0 ;i<lista.length;i++){
+       suma=suma+lista[i];
+       resta=lista[0]-lista[1];
+       mult=mult*lista[i];
+       div=div/lista[i];
+           
+      }
+    System.out.println("suma es "+suma );
+    System.out.println("resta es "+resta );
+    System.out.println("multiplicacion es  "+mult );
+    System.out.println("division es "+div );
+    
+    
+    
+    }
+    
+}
+
+    
+
+
