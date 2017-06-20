@@ -1,0 +1,205 @@
+package matriz3;
+
+import java.util.Scanner;
+
+
+public class Matriz3 {
+
+    
+    public static void main(String[] args) {
+         // Creo variables para poder pedir datos
+         Scanner datos= new Scanner(System.in);
+         //creacion de variables
+         int [][] mat;
+         int i;
+         int n = 0;
+         int x,lim;
+         
+         //pido variables al usuario
+         System.out.println("Ingrese su limite" );
+         lim=datos.nextInt();
+         mat=new int [lim][lim];
+         //llenar la matriz
+         System.out.println("Llenado de la matriz" );
+         for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 
+                 mat[i][x]=datos.nextInt();
+             }
+         }
+         System.out.println("Presentacion de la matriz" );
+       //recorro la matriz
+       for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 
+                 System.out.print(mat[i][x]);
+             }
+           System.out.println(" ");
+         }
+       System.out.println("  " );
+       //presento fila inferior
+       System.out.println("Presentacion de la fila inferior de la matriz" );
+       for (x=0 ;x<lim;x++){
+           
+           System.out.print(mat[lim-1][x]);
+       }
+       System.out.println("  " );
+       //presento diagonal principal
+       System.out.println("Presentacion de la diagonal principal de la matriz" );
+       for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 if(i==x){
+                    System.out.print(mat[i][x]); 
+                 }
+                 
+             }
+         }
+       System.out.println("  " );
+       //presento diagonal secundaria
+       System.out.println("Presentacion de la diagonal secundaria de la matriz" );
+       for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 if(i+x==lim-1){
+                    System.out.print(mat[i][x]); 
+                 }
+                 
+             }
+         }
+       System.out.println("  " );
+       //elemtos sobre la diagonal principal
+       System.out.println("Presentacion de los elm sobre la diag prin " );
+       for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 if(i<x){
+                    System.out.print(mat[i][x]); 
+                 }
+                 
+             }
+         }
+        System.out.println("  " );
+       //elemtos sobre la diagonal secundaria
+       System.out.println("Presentacion de los elm sobre la diag secunda " );
+       for (i = 0; i < lim; i++) {
+            for (x = 0; x < lim; x++) {
+                if ((i + x) < (lim - 1)) {
+                    System.out.print(""+mat[i][x]);
+                }
+            }
+        }
+       System.out.println("  " );
+       //elemtos debajo la diagonal principal
+       System.out.println("Presentacion de los elm debajo la diag principal " );
+        
+        for(i=0;i<lim;i++){
+            for(x=0;x<lim;x++){
+                if(i>x){
+                   System.out.print(mat[i][x]+" "); 
+                }                
+            }            
+        }
+        System.out.println("  " );
+       //elemtos debajo la diagonal secundaria
+       System.out.println("Presentacion de los elm debajo la diag secundaria " );
+         for(i=0;i<lim;i++){
+            for(x=0;x<lim;x++){
+                if((i+x)>=lim){
+                   System.out.print(mat[i][x]+" "); 
+                }                
+            }            
+        }
+         
+       System.out.println("  " );
+       //elemtos en zig zag
+       System.out.println("Presentacion de los elementos en zig zag" );
+       
+        
+    }
+    
+}
+---------------------------------------------------------
+
+package matriz1;
+
+import java.util.Scanner;
+
+public class Matriz1 {
+
+   
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+         Scanner datos= new Scanner(System.in);
+         //creacion de variables
+         int [][] mat;
+         int i;
+         int n = 0;
+         int x;
+         mat=new int [3][3];
+         mat[0][0]=2;
+         mat[0][1]=12;
+         mat[0][2]=22;
+         mat[1][0]=3;
+         mat[1][1]=5;
+         mat[1][2]=7;
+         mat[2][0]=8;
+         mat[2][1]=1;
+         mat[2][2]=52;
+        
+         for (i=0 ;i<3;i++){
+             for (x=0 ;x<3;x++){
+                 System.out.println("Matriz "+mat[i][x] );
+                 
+             }
+             
+              
+             
+         }
+        
+    }
+    
+}
+
+------------------------------------------------
+
+package matriz.llenar;
+
+import java.util.Scanner;
+
+
+public class MatrizLlenar {
+
+    
+    public static void main(String[] args) {
+        // Creo variables para poder pedir datos
+         Scanner datos= new Scanner(System.in);
+         //creacion de variables
+         int [][] mat;
+         int i;
+         int n = 0;
+         int x,lim;
+         
+         //pido variables al usuario
+         System.out.println("Ingrese su limite" );
+         lim=datos.nextInt();
+         mat=new int [lim][lim];
+         //llenar la matriz
+         System.out.println("Llenado de la matriz" );
+         for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 
+                 mat[i][x]=datos.nextInt();
+             }
+         }
+         
+       System.out.println("Presentacion de la matriz" );
+       //recorro la matriz
+       for (i=0 ;i<lim;i++){
+             for (x=0 ;x<lim;x++){
+                 
+                 System.out.print(mat[i][x]);
+             }
+         }
+       
+         
+    }
+    
+}

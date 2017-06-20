@@ -1,0 +1,79 @@
+package metododescc;
+
+public class MetodoDescc {
+static double iva=0.14;
+    
+    public static void main(String[] args) {
+        //creo una varialbes para pedir por consola los datos
+        double resultado, resultado2;
+        mensaje();
+        resultado=calculoiva(354,iva);
+        System.out.println("El calculo del iva es:" +resultado);
+        resultado2=descuentotipo(resultado,"Persona Natural");
+        System.out.println("Con el descuento paga solo: " +resultado2);
+   }
+    public static void mensaje(){
+        System.out.println("mensaje de la funcion mensaje");
+    }
+    public static double calculoiva(double subtotal, double iva){
+        double subtotal2=0;double total=0;
+        
+        subtotal2=subtotal*iva;
+        total=subtotal2+subtotal;
+        return total;
+    }
+    public static double descuentotipo(double total, String tipo){
+        double descuento=0;
+        double desc=0;
+        if(tipo=="Privada"){
+            desc=total*0.02;
+            System.out.println("Tiene un descuento del 2% : "+desc);
+        }       
+        if(tipo=="Publica"){
+            desc=total*0.06;
+            System.out.println("Tiene un descuento del 6% : "+desc);
+        }
+        if(tipo=="Persona Natural"){
+            desc=total*0.08;
+            System.out.println("Tiene un descuento del 8% : "+desc);
+        }
+        descuento=total-desc;
+        return descuento;
+    }
+    
+}
+
+-----------------------------------------------------
+
+package metodos;
+import java.util.Scanner;
+public class Metodos {
+static double iva=0.14;
+    public static void main(String[] args) {
+         // Creo variables para poder pedir datos
+        Scanner datos= new Scanner(System.in);
+        
+        //creacion de variables
+        double resultado;
+        mensaje();
+        resultado=calculoiva(354,iva);
+        System.out.println("el calculo del iva es  "+resultado );
+    }
+    
+
+    public static void mensaje() {
+        System.out.println("Mensaje de la funcion mensaje  " );
+    }
+{
+    
+}
+    public static double calculoiva(double subtotal, double iva) {
+        double subtotal12=0;double total=0;
+        subtotal=subtotal*iva;
+        total=subtotal12+subtotal;
+        return total;
+    }
+}
+
+-----------------------------------------------------
+
